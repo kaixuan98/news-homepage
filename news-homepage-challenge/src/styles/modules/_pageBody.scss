@@ -1,0 +1,124 @@
+// the whole page is in column where each section is stacked 
+.page__container{
+    display: flex; 
+    flex-direction: column;
+}
+
+// page section can be a whole or with partition (in this case is just two partition
+.page__section{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 72px;
+}
+
+// list in the page 
+.page__list--dark-bg{
+    background-color: $very-dark-blue;
+    width: 30%;
+    padding: 24px;
+}
+
+.list__title{
+    font-family: $primary-font;
+    font-size: 1.7em;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+.list__title--dark-bg{
+    color: $primary-soft-orange;
+}
+
+// the foundation of an article is here 
+.page__article{
+    display: flex;
+
+}
+
+// the variants of each article, it can be with feature, sideways or stacked
+.page__article--feature{
+    flex-direction: column;
+    margin-right: 32px;
+    width: 70%;
+}
+
+.page__article--sideways{
+    flex-direction: row;
+}
+
+// inside the div of page article stack will not have an article seperator
+.page__article--stack{
+    flex-direction: column;
+    &:last-child{
+        .article__seperator{
+            display: none;
+        }
+    }
+}
+
+
+
+// general css for articles
+.article__title{
+    font-size: 1em;
+    font-weight: 800;
+    font-family: $primary-font;
+    color: $very-dark-blue;
+    margin-bottom: 0;
+}
+// for dark background
+.article__title--dark-bg{
+    color: $off-white;
+}
+
+.article__subtitle{ 
+    font-size: 0.9em;
+    font-family: $primary-font;
+    color: $dark-grayish-blue;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.article__seperator{
+    background-color: $grayish-blue;
+    width: 100%;
+    border: solid 0.5px $grayish-blue;
+}
+
+// feature articles css - the css that specifically for feature articles
+.article__image-wrapper--feature{
+    // the image is following the parent width and height,
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.article__content-container--feature{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.article__title-wrapper{
+    width: 50%;
+}
+.article__content-wrapper{
+    width: 50%;
+}
+
+.article__title--feature{
+    font-size: 3em;
+}
+
+// for the bottom list 
+.article__image-wrapper{
+    width: 30%;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.article__content{
+    width: 70%;
+}

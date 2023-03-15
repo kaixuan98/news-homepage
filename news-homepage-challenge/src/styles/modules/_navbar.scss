@@ -1,0 +1,45 @@
+// layers in the navbar  
+/*
+* navbar (header)
+*   |-- navbar__logo (div-left)
+*   |-- navbar__links-container (div-right)
+*   |     |-- navbar__links (ul) 
+*   |     |      |-- navbar__link (li) 
+*/
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    margin-bottom: 48px;
+}
+
+.navbar__logo{
+    width: 50%;
+    font-family: 'Inter';
+    font-weight: 800;
+    font-size: 2em;
+}
+
+.navbar__links-container{
+    width: 50%;
+}
+
+.navbar__links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    font-family: 'Inter';
+}
+
+.navbar__link{
+    color: $dark-grayish-blue; 
+    cursor: pointer;
+
+    &:hover{
+        color: $primary-soft-red;
+    }   
+}
+
