@@ -71,9 +71,11 @@ const PageBody = () => {
                   <p className={` ${'article__title'} ${"article__title--feature"}`}>{featureArticle.title}</p>
                 </div>
                 <div className="article__content-wrapper">
-                  <div className="article__content--stack">
+                  <div className={`${"article__content--stack"} ${"article__content--feature"}`}>
                     <p className="article__subtitle">{featureArticle.subtitle}</p>
-                    <button>{featureArticle.buttonText}</button>
+                    <div className="btn__wrapper">
+                      <button className="btn">{featureArticle.buttonText}</button>
+                    </div>
                   </div>
                 </div>
               </div>
