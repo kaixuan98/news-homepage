@@ -101,7 +101,7 @@ const PageBody = () => {
                       <img src={require(`../assets/${article.img}`)} alt={article.title}></img>
                     </div>
                     <div className={`${"article__content"} ${"article__content--stack"}`}>
-                      <p>{article.no}</p>
+                      <p className="article__numbering">{article.no}</p>
                       <p className="article__title">{article.title}</p>
                       <p className="article__subtitle">{article.subtitle}</p>
                     </div>

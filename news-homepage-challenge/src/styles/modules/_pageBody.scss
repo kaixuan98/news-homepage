@@ -9,6 +9,9 @@
     display: flex;
     flex-direction: row;
     margin-bottom: 72px;
+    &:last-child{
+        margin-bottom: 0;
+    }
 }
 
 // list in the page 
@@ -76,12 +79,14 @@
     color: $dark-grayish-blue;
     text-align: left;
     line-height: 1.5;
+    margin-bottom: 0;
 }
 
 .article__seperator{
     background-color: $grayish-blue;
     width: 100%;
     border: solid 0.5px $grayish-blue;
+    margin-top: 12px;
 }
 
 // feature articles css - the css that specifically for feature articles
@@ -110,9 +115,10 @@
     font-size: 3em;
 }
 
-// for the bottom list 
+// articles at the bottom list
 .article__image-wrapper{
     width: 30%;
+    margin-right: 12px;
     img{
         width: 100%;
         height: 100%;
@@ -121,4 +127,13 @@
 
 .article__content{
     width: 70%;
+    margin-right: 12px;
+}
+
+.article__numbering{
+    font-weight: 800;
+    color: $grayish-blue;
+    font-size: 2em;
+    margin-bottom: 0;
+    margin-top: 0;
 }
