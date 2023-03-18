@@ -33,8 +33,8 @@ For mobile size screenshot, please check at the root file with the title `phone-
 
 ### 🔗 Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://github.com/kaixuan98/news-homepage)
+- [Live Site URL](https://kaixuan98.github.io/news-homepage/)
 
 ## My process
 
@@ -43,24 +43,33 @@ For mobile size screenshot, please check at the root file with the title `phone-
 - HTML 
 - CSS custom properties with Sass Framework
 - Flexbox
-- [React](https://reactjs.org/) - TypeScript
+- [React in TypeScript](https://www.typescriptlang.org/docs/handbook/react.html) 
 
 ### 📝 What I learned
-1. BEM naming 
-2. CSS (change of mental model)
+
+1. **BEM naming**
+    Naming things is one of the hardest part in a project (in my opinion), in this project I implemented BEM naming which follow the following format: `Block__Element--Modifier`. For example, if I have a UI component, which is an article, under the article, it has a title. The BEM naming for that article is `article__title`. If we need different version of the title, maybe it is in a dark background we can add a modifier to it (`article__title--darkbg`). This is just a simple example for BEM naming convention. In this project, I had tried to do the best practice for BEM naming and try to be general and concise but yet this is a skill that required practise. 
+2. **CSS (change of mental model)** 
+   CSS might seems to be random and no order to it. I used to think CSS is just a bunch of properties and each of them works on its own element or children until I came across an article ["Understanding Layout Algorithms by Josh Comeau"](https://www.joshwcomeau.com/css/understanding-layout-algorithms/). This article change the way I think about CSS layouts, I can better understand and visualize how my components and elements interact with each other in the code. 
+3. **TypeScript**
+   I had some exposure in Typescript during a course in my final year of University, and now I wanted to add that to my tech stack. I started this project with React framework in typescript. The challenges is that I am so used to React without types, I always get error when I am passing a prop or setting up a variables. I learned how to pass props in React typescript, create custom types, and use types in React hooks. 
 
 
 ### ⚙️ Continued development
-
+1. add one more breakpoint for the tablet
+2. organized my SASS code to be more dynamic and modular - try to add a simple breakpoint manager with SASS
+3. organized my react code to be more modular 
 
 ### 📡 Useful resources
 
-- [Example resource 1](https://www.joshwcomeau.com/css/understanding-layout-algorithms/) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Understanding Layout Algorithm by Josh Comeau](https://www.joshwcomeau.com/css/understanding-layout-algorithms/) 
+- [BEM Naming](https://getbem.com/naming/)
+- [SASS Best Practice](https://sass-guidelin.es/)
 
 
 ## Author
 
-- Website - [Avery Chin](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Github 
+- Website - [Avery Chin](https://www.averychin.xyz)
+- Frontend Mentor - [@kaixuan98](https://www.frontendmentor.io/profile/kaixuan98)
+- Github - [@kaixuan98](https://github.com/kaixuan98)
 
