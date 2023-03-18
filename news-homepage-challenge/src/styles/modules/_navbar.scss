@@ -43,3 +43,45 @@
     }   
 }
 
+@media only screen and (max-width: 375px)  {
+    .navbar__overlay-container{
+        position: fixed;
+        z-index: 100;
+        top: 0; 
+        left: 0;
+    }
+
+    .navbar__overlay-container--active{
+        height: 100vh; 
+        width: 100%;
+        background-color:hsla(240, 100%, 5%, 0.7);
+        transition: 1s ease-in;
+    }
+
+    .navbar__overlay-content{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 60%;
+        background-color: $off-white;
+        padding-top: 5%;
+        padding-right: 5%;
+    }
+
+    .navbar__icon-btn--side{
+        display: flex;
+        justify-content: right;
+        margin-bottom: 64px;
+        
+    }
+    .navbar__links--stack{
+        flex-direction: column;
+    }
+    .navbar__link{
+        margin-bottom: 24px;
+        color: $very-dark-blue;
+    }
+
+}
+

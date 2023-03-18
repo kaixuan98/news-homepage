@@ -15,7 +15,16 @@ interface FeatureArticle extends Article{
   buttonText: string;
 }
 
-const PageBody = () => {
+type windowSize = {
+  width: number;
+  height: number;
+}
+
+type PageProps = {
+  windowSize: windowSize;
+}
+
+const PageBody = ( {windowSize} : PageProps ) => {
   const smallArticles: SmallArticle[] = [
     {
       img: 'image-retro-pcs.jpg',
@@ -64,7 +73,14 @@ const PageBody = () => {
         <div className={`${'page__section'}`}>
             <div className={ `${"page__article"} ${"page__article--feature"}`}>
               <div className="article__image-wrapper--feature">
-                <img src={require(`../assets/image-web-3-desktop.jpg`)} alt={featureArticle.title}></img>
+                {
+                  windowSize.width <= 375 ? (
+                    <img src={require(`../assets/image-web-3-mobile.jpg`)} alt={featureArticle.title}></img>
+
+                  ):(
+                    <img src={require(`../assets/image-web-3-desktop.jpg`)} alt={featureArticle.title}></img>
+                  )
+                }
               </div>
               <div className="article__content-container--feature">
                 <div className="article__title-wrapper">
@@ -81,11 +97,11 @@ const PageBody = () => {
               </div>
             </div>
 
-            <div className={`${"page__list"} ${"page__list--stack"} ${"page__list--dark-bg"}`}>
+            <div className={`${"page__list--dark-bg"}`}>
               <p className={`${"list__title"} ${"list__title--dark-bg"}`}>New</p>
               {
                 sideArticles.map( sideArticle => (
-                  <div className={ `${"page__article"} ${"page__article--stack"}`}>
+                  <div className={ `${"page__article"} ${"page__article--stack"}`} key={sideArticle.title}>
                     <p className={`${"article__title"} ${"article__title--dark-bg"}`}>{sideArticle.title}</p>
                     <p className="article__subtitle">{sideArticle.subtitle}</p>
                     <hr className="article__seperator"></hr>
@@ -110,8 +126,6 @@ const PageBody = () => {
                   </div>
               ))
             }
-
-            
         </div>
     </div>
   )

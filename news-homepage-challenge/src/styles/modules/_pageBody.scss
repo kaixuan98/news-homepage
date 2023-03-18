@@ -2,6 +2,7 @@
 .page__container{
     display: flex; 
     flex-direction: column;
+    width: 100%;
 }
 
 // page section can be a whole or with partition (in this case is just two partition
@@ -16,6 +17,8 @@
 
 // list in the page 
 .page__list--dark-bg{
+    display:flex;
+    flex-direction: column;
     background-color: $very-dark-blue;
     width: 30%;
     padding: 24px;
@@ -34,7 +37,6 @@
 // the foundation of an article is here 
 .page__article{
     display: flex;
-
 }
 
 // the variants of each article, it can be with feature, sideways or stacked
@@ -160,4 +162,40 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+@media only screen and (max-width: 375px)  {
+    .page__section{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 48px;
+    }
+
+    .page__article--feature{
+        width: 100%; 
+        margin-right: 0;
+        margin-bottom: 48px ;
+    }
+
+    .article__title-wrapper, .article__content-wrapper{
+        width: 100%;
+    }
+
+    .article__title--feature{
+        font-size: 2em;
+    }
+
+    .article__content-container--feature{
+        margin-top: 8px;
+        flex-direction: column;
+    }
+    .page__list--dark-bg{
+        width: 90%;
+    }
+
+    .page__article--sideways{
+        margin-bottom: 12px;
+    }
 }

@@ -6,3 +6,9 @@
     // top margin < bottom margin so the porpotion is 1:3 (to be accurate 2:3)
     margin: 5% 10% 5% 10%;
 }
+
+@media only screen and (max-width: 375px){
+    .App{
+        margin: 5%;
+    }
+}

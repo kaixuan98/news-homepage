@@ -17,3 +17,9 @@
         cursor: pointer;
     }
 }
+
+@media only screen and (max-width: 375px)  {
+    .btn__wrapper{
+        margin-top: 16px;
+    }
+}
