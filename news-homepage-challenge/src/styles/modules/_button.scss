@@ -1,0 +1,25 @@
+.btn__wrapper{
+    display: flex;
+}
+
+.btn{
+    background-color: $primary-soft-red;
+    border: 0px solid ;
+    padding: 12px 24px 12px 24px;
+    color: $off-white; 
+    text-transform: uppercase; 
+    letter-spacing: 4px;
+    font-size: 0.75em;
+    font-weight: 700;
+
+    &:hover{
+        background-color: $very-dark-blue;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 375px)  {
+    .btn__wrapper{
+        margin-top: 16px;
+    }
+}

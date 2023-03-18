@@ -1,0 +1,14 @@
+.App{
+    // how do I calculate the percentage? 
+    // the size of the picture: 1440 x 1023 
+    // the content : 1110 x 800
+    // the rest of them will be the margin 
+    // top margin < bottom margin so the porpotion is 1:3 (to be accurate 2:3)
+    margin: 5% 10% 5% 10%;
+}
+
+@media only screen and (max-width: 375px){
+    .App{
+        margin: 5%;
+    }
+}
