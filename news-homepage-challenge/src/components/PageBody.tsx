@@ -69,9 +69,9 @@ const PageBody = ( {windowSize} : PageProps ) => {
   }
 
   return (
-    <div className="page__container">
-        <div className={`${'page__section'}`}>
-            <div className={ `${"page__article"} ${"page__article--feature"}`}>
+    <main className="page__container" aria-label='Page Content'>
+        <section className={`${'page__section'}`}aria-label='Top Section'>
+            <article className={ `${"page__article"} ${"page__article--feature"}`} aria-label='Feature Article'>
               <div className="article__image-wrapper--feature">
                 {
                   windowSize.width <= 375 ? (
@@ -84,7 +84,8 @@ const PageBody = ( {windowSize} : PageProps ) => {
               </div>
               <div className="article__content-container--feature">
                 <div className="article__title-wrapper">
-                  <p className={` ${'article__title'} ${"article__title--feature"}`}>{featureArticle.title}</p>
+                  <h1 className={` ${'article__title'} ${"article__title--feature"}`}
+                  aria-label='Article Title'>{featureArticle.title}</h1>
                 </div>
                 <div className="article__content-wrapper">
                   <div className={`${"article__content--stack"} ${"article__content--feature"}`}>
@@ -95,39 +96,43 @@ const PageBody = ( {windowSize} : PageProps ) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div className={`${"page__list--dark-bg"}`}>
-              <p className={`${"list__title"} ${"list__title--dark-bg"}`}>New</p>
+            <section className={`${"page__list--dark-bg"}`} aria-label='Side Section'>
+              <h1 className={`${"list__title"} ${"list__title--dark-bg"}`} aria-label="Side Section Title">New</h1>
               {
                 sideArticles.map( sideArticle => (
-                  <div className={ `${"page__article"} ${"page__article--stack"}`} key={sideArticle.title}>
-                    <p className={`${"article__title"} ${"article__title--dark-bg"}`}>{sideArticle.title}</p>
+                  <article 
+                    className={ `${"page__article"} ${"page__article--stack"}`} 
+                    key={sideArticle.title}
+                    aria-label="Side Article"
+                    >
+                    <h1 className={`${"article__title"} ${"article__title--dark-bg"}`}>{sideArticle.title}</h1>
                     <p className="article__subtitle">{sideArticle.subtitle}</p>
                     <hr className="article__seperator"></hr>
-                  </div>
+                  </article>
                 ) )
               }
-            </div>
-        </div>
+            </section>
+        </section>
 
-        <div className="page__section">
+        <section className="page__section" aria-label='Bottom Section'>
             {
               smallArticles.map( (article) => (
-                  <div className={ `${"page__article"} ${"page__article--sideways"}`} key={article.no}>
+                  <article className={ `${"page__article"} ${"page__article--sideways"}`} key={article.no} aria-label='Small Article'>
                     <div className="article__image-wrapper">
                       <img src={require(`../assets/${article.img}`)} alt={article.title}></img>
                     </div>
                     <div className={`${"article__content"} ${"article__content--stack"}`}>
                       <p className="article__numbering">{article.no}</p>
-                      <p className="article__title">{article.title}</p>
+                      <h1 className="article__title">{article.title}</h1>
                       <p className="article__subtitle">{article.subtitle}</p>
                     </div>
-                  </div>
+                  </article>
               ))
             }
-        </div>
-    </div>
+        </section>
+    </main>
   )
 }
 

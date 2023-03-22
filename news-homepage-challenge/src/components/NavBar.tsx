@@ -17,25 +17,26 @@ type NavBarProps = {
 const NavBar = ({windowSize, isMenuActive, handleMenuActive}: NavBarProps): JSX.Element => {
   
   return (
-    <header className="navbar">
+    <header className="navbar" aria-label='Header'>
         <div className="navbar__logo">
             <Logo/>
         </div>
         {
-          windowSize.width >= 600? (
-            <div className="navbar__links-container">
-                <ul className="navbar__links">
-                    <li className="navbar__link">Home</li>
-                    <li className="navbar__link">New</li>
-                    <li className="navbar__link">Popular</li>
-                    <li className="navbar__link">Trending</li>
-                    <li className="navbar__link">Categories</li>
+          windowSize.width >= 375? (
+            <nav className="navbar__links-container">
+                {/* Need to use React Router to render a link so rather than implement it */}
+                <ul className="navbar__links" >
+                    <li className="navbar__link" role="link">Home</li>
+                    <li className="navbar__link" role="link">New</li>
+                    <li className="navbar__link" role="link">Popular</li>
+                    <li className="navbar__link" role="link">Trending</li>
+                    <li className="navbar__link" role="link">Categories</li>
                 </ul>
-            </div>
+            </nav>
           ):(
             <div className="navbar__icon-btn" onClick={() => handleMenuActive(!isMenuActive)}>
               <Menu/>
-              </div>
+            </div>
             )
         }   
     </header>
