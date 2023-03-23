@@ -3,6 +3,7 @@ import '../styles/styles.scss';
 import Logo from './Logo';
 import Menu from './Menu';
 
+
 type windowSize = {
   width: number;
   height: number;
@@ -25,12 +26,12 @@ const NavBar = ({windowSize, isMenuActive, handleMenuActive}: NavBarProps): JSX.
           windowSize.width >= 375? (
             <nav className="navbar__links-container">
                 {/* Need to use React Router to render a link so rather than implement it */}
-                <ul className="navbar__links" >
-                    <li className="navbar__link" role="link">Home</li>
-                    <li className="navbar__link" role="link">New</li>
-                    <li className="navbar__link" role="link">Popular</li>
-                    <li className="navbar__link" role="link">Trending</li>
-                    <li className="navbar__link" role="link">Categories</li>
+                <ul className="navbar__links">
+                  <li className="navbar__link">Home</li>
+                  <li className="navbar__link">New</li>
+                  <li className="navbar__link">Popular</li>
+                  <li className="navbar__link">Trending</li>
+                  <li className="navbar__link">Categories</li>
                 </ul>
             </nav>
           ):(

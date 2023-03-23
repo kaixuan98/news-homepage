@@ -9,6 +9,7 @@ type windowSize = {
   height: number;
 }
 
+
 function App() {
   // prop the state up so I can create an overlay on the pageBody
   const [windowSize, setWindowSize] = useState<windowSize>({width: window.innerWidth, height: window.innerHeight});
@@ -28,33 +29,33 @@ function App() {
 
   return (
     <div className="App">
-        {
-          isMenuActive? 
-          (
-            <nav 
-              className={`${"navbar__overlay-container"} ${isMenuActive? "navbar__overlay-container--active": ""}`} 
-              onClick={ () => setIsMenuActive(!isMenuActive)}
-              aria-label="FullScreenMenu"
-              >
-              <div className="navbar__overlay-content">
-                <div className="navbar__icon-btn--side" onClick={ () => setIsMenuActive(!isMenuActive)}>
-                  <Close />
+          {
+            isMenuActive? 
+            (
+              <nav 
+                className={`${"navbar__overlay-container"} ${isMenuActive? "navbar__overlay-container--active": ""}`} 
+                onClick={ () => setIsMenuActive(!isMenuActive)}
+                aria-label="FullScreenMenu"
+                >
+                <div className="navbar__overlay-content">
+                  <div className="navbar__icon-btn--side" onClick={ () => setIsMenuActive(!isMenuActive)}>
+                    <Close />
+                  </div>
+                  <ul className={`${"navbar__links"} ${"navbar__links--stack"}`} aria-label="Menu List">
+                      <li className="navbar__link">Home</li>
+                      <li className="navbar__link">New</li>
+                      <li className="navbar__link">Popular</li>
+                      <li className="navbar__link">Trending</li>
+                      <li className="navbar__link">Categories</li>
+                  </ul>
                 </div>
-                <ul className={`${"navbar__links"} ${"navbar__links--stack"}`} aria-label="Menu List">
-                    <li className="navbar__link" role="link">Home</li>
-                    <li className="navbar__link" role="link">New</li>
-                    <li className="navbar__link" role="link">Popular</li>
-                    <li className="navbar__link" role="link">Trending</li>
-                    <li className="navbar__link" role="link">Categories</li>
-                </ul>
-              </div>
-            </nav>
-          ): (     
-            <NavBar windowSize={windowSize} isMenuActive={isMenuActive} handleMenuActive={setIsMenuActive}/>
-          )
-        }
-      <PageBody windowSize={windowSize}/>
-    </div>
+              </nav>
+            ): (     
+              <NavBar windowSize={windowSize} isMenuActive={isMenuActive} handleMenuActive={setIsMenuActive}/>
+            )
+          }
+        <PageBody windowSize={windowSize}/>
+        </div>
   );
 }
 

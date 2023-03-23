@@ -84,8 +84,7 @@ const PageBody = ( {windowSize} : PageProps ) => {
               </div>
               <div className="article__content-container--feature">
                 <div className="article__title-wrapper">
-                  <h1 className={` ${'article__title'} ${"article__title--feature"}`}
-                  aria-label='Article Title'>{featureArticle.title}</h1>
+                  <h2 className={` ${'article__title'} ${"article__title--feature"}`} >{featureArticle.title}</h2>
                 </div>
                 <div className="article__content-wrapper">
                   <div className={`${"article__content--stack"} ${"article__content--feature"}`}>
@@ -107,7 +106,7 @@ const PageBody = ( {windowSize} : PageProps ) => {
                     key={sideArticle.title}
                     aria-label="Side Article"
                     >
-                    <h1 className={`${"article__title"} ${"article__title--dark-bg"}`}>{sideArticle.title}</h1>
+                    <h2 className={`${"article__title"} ${"article__title--dark-bg"}`}>{sideArticle.title}</h2>
                     <p className="article__subtitle">{sideArticle.subtitle}</p>
                     <hr className="article__seperator"></hr>
                   </article>
@@ -119,13 +118,13 @@ const PageBody = ( {windowSize} : PageProps ) => {
         <section className="page__section" aria-label='Bottom Section'>
             {
               smallArticles.map( (article) => (
-                  <article className={ `${"page__article"} ${"page__article--sideways"}`} key={article.no} aria-label='Small Article'>
+                  <article className={ `${"page__article"} ${"page__article--sideways"}`} key={article.no}>
                     <div className="article__image-wrapper">
                       <img src={require(`../assets/${article.img}`)} alt={article.title}></img>
                     </div>
                     <div className={`${"article__content"} ${"article__content--stack"}`}>
                       <p className="article__numbering">{article.no}</p>
-                      <h1 className="article__title">{article.title}</h1>
+                      <h2 className="article__title">{article.title}</h2>
                       <p className="article__subtitle">{article.subtitle}</p>
                     </div>
                   </article>
